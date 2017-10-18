@@ -20,14 +20,7 @@ app.set('views', path.join ( __dirname,"/views"));
 
 //Aplicando configuraciones a nuestra App
 
-app=config(app);
-
-// Crear las rutas de pruena de la app
-
-app.get('/', (req, res)=>{
-    //Codificando de la respuesta
-    res.send ("Hola Mundo")
-});
+app = config(app);
 
 // Consultar las variables de entorno 
 // p ara rescatar la IP y el PORT

@@ -8,8 +8,9 @@ var path = require ('path'),
     morgan = require ('morgan'),
     methodOverride = require ('method-override'),
     errorHandler = require ('errorhandler'),
-    moment = require ('moment')
-    multer = require ('multer');
+    moment = require ('moment'),
+    multer = require ('multer'),
+    routes = require ('./routes');
 
 module.exports= function(app){
     // Conectando Middlewares
@@ -25,6 +26,9 @@ module.exports= function(app){
     app.use(methodOverride());
     // Parseo de Cookies
     app.use(cookieParser('Algun-valor-secreto'));
+    //Crear las rutas de prueba de la app
+    app= routes(app);
+
     // Habilitando el servicio estatico 
     // de archivos
     app.use ('/public/', express.static(path.join(
@@ -35,6 +39,6 @@ module.exports= function(app){
     if (app.get('env') === 'development'){
         app.use(errorHandler());
     }
-    return app;
+return app;
 
 }
