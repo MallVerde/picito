@@ -26,7 +26,7 @@ app=config(app);
 
 app.get('/', (req, res)=>{
     //Codificando de la respuesta
-    res.send ("Hola ITO")
+    res.send ("Hola Mundo")
 });
 
 // Consultar las variables de entorno 
