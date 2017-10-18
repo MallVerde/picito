@@ -1,0 +1,4 @@
+# Omitiendo dewpendeicas del backend
+node_modules
+# Omitiendo dependencias del fronted
+public/vendor
